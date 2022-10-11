@@ -77,6 +77,8 @@ body {
   color: #000000;
 }
 
+.welcome {}
+
 .welcome-image {
   background-image: url("../images/index-background.jpg");
   background-color: rgb(200, 219, 241);
@@ -90,7 +92,6 @@ body {
   background-image: url("../images/index-divider.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
-
 
 }
 
@@ -146,11 +147,20 @@ body {
   text-transform: uppercase;
 }
 
+.search-result {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+
+}
+
 .subscribe {
   background-image: url("../images/subsribe-background.jpg");
   background-color: #82B3D3;
   color: #ffffff;
   text-align: center;
+  background-size: 100% auto;
 
 }
 
