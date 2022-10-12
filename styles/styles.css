@@ -75,14 +75,6 @@ body {
   color: #000000;
   background-repeat: no-repeat;
   background-size: 100% auto;
-
-}
-
-.welcome-divider{
-  background-image: url("../images/index-divider.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-
 }
 
 .welcome-title {
