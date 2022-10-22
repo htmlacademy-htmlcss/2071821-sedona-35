@@ -71,7 +71,6 @@ body {
 
 .page-header {
   display:flex;
-  width: 100%;
   padding-left: 70px ;
   padding-right: 70px;
 }
@@ -184,12 +183,10 @@ body {
 }
 
 .blu-item-image {
-
   width: 800px;
 }
 
 .blu-item-text {
-
   width: 400px;
 }
 
@@ -264,7 +261,6 @@ body {
 
 .page-footer {
   display: flex;
-  width: 100%;
   padding-left: 70px;
   padding-right: 70px;
 }
@@ -306,8 +302,7 @@ body {
 
 .catalog-sorting {
   display: flex;
-  width: 100%;
-}
+ }
 
 .select-control{
   width:292px;
@@ -316,7 +311,6 @@ body {
 
 .product-list {
   display: flex;
-  width: 100%;
   padding: 0;
   margin:0;
   flex-wrap: wrap;
