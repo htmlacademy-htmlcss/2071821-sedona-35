@@ -41,6 +41,8 @@ body {
 
 
 .button {
+  display: inline-block;
+  /*padding: 8px 50px;*/
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -50,11 +52,15 @@ body {
   background-color: #82b3d3;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
 
 .big-button {
   font-size: 20px;
   line-height: 36px;
+  padding-left: 34px;
+  padding-right: 34px;
 }
 
 .brown-button {
@@ -223,6 +229,7 @@ body {
 
 
 .blue-item-text {
+  box-sizing: border-box;
   width: 400px;
   padding: 92px 85px 111px 85px;
 }
@@ -323,8 +330,8 @@ body {
 
 .page-footer {
   display: flex;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 45px 70px 35px 70px;
+
 }
 
 .footer-contacts {
@@ -342,15 +349,16 @@ body {
   padding: 0;
   list-style-type: none;
 }
-
+/*
 .footer-social-item:not(:last-child) {
   margin-right: 8px;
- }
+ }*/
 
  .footer-social-item .button{
   display: block;
   width: 47px;
   height: 40px;
+  padding: 0;
 }
 
 .breadcrumbs {
