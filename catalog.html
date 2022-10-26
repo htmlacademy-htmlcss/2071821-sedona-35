@@ -27,14 +27,12 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="vissually-hidden">
-                Поиск
-              </span>
+              <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="vissually-hidden">Избранное</span>
+              <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="navigation-item">
@@ -137,11 +135,12 @@
 
       <section class="catalog">
         <div class="catalog-sorting">
-          <p class="search-result">Найдено гостиниц: <span class="search-result" >38</span></p>
+          <p class="search-result">Найдено гостиниц: <span class="search-volume" >38</span></p>
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвые</option>
             <option value="popular">Сначала популярные</option>
           </select>
+          <div class="view-wrapper">
 
           <a class="button button-selected"  href="#">
             <span class="visually-hidden">Показать карточки</span>
@@ -153,6 +152,7 @@
             <span class="visually-hidden">Показать список</span>
           </a>
         </div>
+        </div>
 
         <ul class="product-list">
         <li class="product-card">
@@ -163,6 +163,7 @@
           <span>Гостиница</span><b class="product-card-price">От 4000 ₽</b>
           <a class="product-card-button button brown-button" href="#">Подробнее</a>
           <button class="button">В избранное</button>
+          <div class="stars"></div>
           <div class="rating">Рейтинг: 8,5</div>
         </li>
 
@@ -174,6 +175,7 @@
           <span>Гостиница</span><b class="product-card-price">От 5000 ₽</b>
           <a class="product-card-button button brown-button" href="#">Подробнее</a>
           <button class="button button-selected-green">В избранном</button>
+          <div class="stars"></div>
           <div class="rating">Рейтинг: 9,2</div>
         </li>
 
@@ -185,6 +187,7 @@
           <span>Гостиница</span><b class="product-card-price">От 2500 ₽</b>
           <a class="product-card-button button brown-button" href="#">Подробнее</a>
           <button class="button">В избранное</button>
+          <div class="stars"></div>
           <div class="rating">Рейтинг: 6,9</div>
         </li>
 
@@ -196,6 +199,7 @@
           <span>Гостиница</span><b class="product-card-price">От 1500 ₽</b>
           <a class="product-card-button button brown-button" href="#">Подробнее</a>
           <button class="button">В избранное</button>
+          <div class="stars"></div>
           <div class="rating">Рейтинг 5,0</div>
         </li>
       </ul>
@@ -224,7 +228,7 @@
 
       </section>
 
-      <section class="subscribe">
+      <section class="subscribe subscribe-inner">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru" method="post">
