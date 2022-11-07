@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
     <div class="page-container">
@@ -62,7 +64,7 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
-              <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" fill="#fff"/><path d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z" fill="#fff"/></svg>
+              <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"            /><path d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z" fill="#fff"/></svg>
             </a>
           </li>
           <li class="breadcrumbs-item-catalog">
@@ -80,31 +82,29 @@
           <ul class="filter-hotels-list">
             <li class="filter-hotels-item">
               <label class="control">
-                <input class="control-input" type="checkbox" name="swimmingpool" checked>
-
+                <input class="visually-hidden control-input" type="checkbox" name="swimmingpool" checked>
+                <span class="control-mark"></span>
             Бассейн
               </label>
             </li>
 
               <li class="filter-hotels-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="parking" checked>
-
+                  <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                  <span class="control-mark"></span>
               Парковка
                 </label>
               </li>
 
               <li class="filter-hotels-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="wifi">
-
+                  <input class="visually-hidden control-input" type="checkbox" name="wifi">
+                  <span class="control-mark"></span>
               Wi-Fi
                 </label>
               </li>
           </ul>
         </fieldset>
-
-
 
         <fieldset class="filter-hotels-group">
         <legend class="filter-hotels-title">Тип жилья:</legend>
@@ -112,28 +112,53 @@
         <ul class="filter-hotels-list">
           <li class="filter-hotels-item">
             <label class="control">
-              <input class="control-input" type="radio" name="accomodation-type" value="hotel" checked>
-
+              <input class="visually-hidden control-input" type="radio" name="accomodation-type" value="hotel" checked>
+              <span class="control-circle"></span>
           Гостиница
             </label>
           </li>
 
             <li class="filter-hotels-item">
               <label class="control">
-                <input class="control-input" type="radio" name="accomodation-type" value="motel">
-
+                <input class="visually-hidden control-input" type="radio" name="accomodation-type" value="motel">
+                <span class="control-circle"></span>
             Мотель
               </label>
             </li>
 
             <li class="filter-hotels-item">
               <label class="control">
-                <input class="control-input" type="radio" name="accomodation-type" value="apartment">
-
+                <input class="visually-hidden control-input" type="radio" name="accomodation-type" value="apartment">
+                <span class="control-circle"></span>
             Апартаменты
               </label>
             </li>
         </ul>
+      </fieldset>
+
+      <fieldset class="filter-hotels-group">
+        <legend class="filter-hotels-title">Стоимость, 	&#8381;</legend>
+        <div class="range-input-wrapper">
+         <label class="price">
+          <input class="price-input price-input-min" type="number" name="min-price" value="0" min="0" >
+         </label>
+         <label class="price">
+          <input class="price-input price-input-max" type="number" name="max-price" value="9000" min="0" max="9999" >
+         </label>
+        </div>
+
+        <div class="range-scale">
+          <div class="range-bar" style="left: 0; width: 226px">
+            <button class="range-toggle toggle-min" type="button">
+              <span class="visually-hidden">Изменить минимальную цену.</span>
+            </button>
+            <button class="range-toggle toggle-max" type="button">
+              <span class="visually-hidden">Изменить максимальную цену.</span>
+            </button>
+          </div>
+        </div>
+
+
       </fieldset>
 
       <div class="filter-buttons-wrapper">
@@ -156,19 +181,13 @@
           <div class="view-wrapper">
 
           <a class="button button-selected button-tile-view"  href="#">
-            <span class="visually-hidden">Показать карточки</span>
-
-
+            <span class="visually-hidden">Показать карточки.</span>
           </a>
           <a class="button button-large-view" href="#">
-            <span class="visually-hidden">Показать карточку крупно</span>
-
-
+            <span class="visually-hidden">Показать карточку крупно.</span>
           </a>
           <a class="button button-list-view" href="#">
-            <span class="visually-hidden">Показать список</span>
-
-
+            <span class="visually-hidden">Показать список.</span>
           </a>
         </div>
         </div>
@@ -251,8 +270,8 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" placeholder="Ваш e-mail">
-          <button class="button" type="submit">Подписаться</button>
+          <input class="input-email" type="email" name="email" placeholder="Ваш e-mail">
+          <button class="button big-button" type="submit">Подписаться</button>
         </form>
       </section>
 
@@ -303,7 +322,6 @@
              <path d="M98.2 18.2564C96.6 18.2564 95.3 19.0564 94.6 20.2564H94.5C93.9 19.0564 92.7 18.2564 91.1 18.2564C89.7 18.2564 88.6 18.9564 88 20.0564V18.5564H86.1V29.1564H88.1V23.7564C88.1 21.7564 89.1 20.3564 90.7 20.2564C92.2 20.2564 93.1 21.2564 93.1 22.8564V29.1564H95.1V23.5564C95.1 21.1564 96.5 20.2564 97.7 20.2564C99.2 20.2564 100.1 21.2564 100.1 22.8564V29.1564H102.1V22.6564C102.2 20.0564 100.7 18.2564 98.2 18.2564Z" />
              <path d="M109.4 27.3564L105.8 18.4564H103.6L108.4 30.0564C108.1 30.9564 107.7 31.2564 106.7 31.2564H104.2V33.2564H106.7C108.5 33.2564 109.5 32.4564 110.2 30.6564L114.9 18.4564H112.8L109.4 27.3564Z"/>
              </svg>
-
          </a>
        </section>
 

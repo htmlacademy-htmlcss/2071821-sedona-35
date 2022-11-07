@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
     <div class="page-container">
@@ -50,7 +52,6 @@
           </li>
         </ul>
      </nav>
-
     </header>
 
     <main class="main-index main-container" >
@@ -62,9 +63,7 @@
           <h2 class="welcome-title">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h2>
           <p class="welcome-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-
       </section>
-
 
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -113,7 +112,6 @@
         </ul>
       </section>
 
-
       <section class="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
@@ -124,7 +122,7 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru" method="post">
-          <input class="input-email" type="email" name="email" placeholder="Ваш e-mail">
+          <input class="input-email" type="email" name="email" placeholder="Ваш e-mail" required>
           <button class="button big-button" type="submit">Подписаться</button>
         </form>
       </section>
@@ -175,14 +173,73 @@
             <path d="M98.2 18.2564C96.6 18.2564 95.3 19.0564 94.6 20.2564H94.5C93.9 19.0564 92.7 18.2564 91.1 18.2564C89.7 18.2564 88.6 18.9564 88 20.0564V18.5564H86.1V29.1564H88.1V23.7564C88.1 21.7564 89.1 20.3564 90.7 20.2564C92.2 20.2564 93.1 21.2564 93.1 22.8564V29.1564H95.1V23.5564C95.1 21.1564 96.5 20.2564 97.7 20.2564C99.2 20.2564 100.1 21.2564 100.1 22.8564V29.1564H102.1V22.6564C102.2 20.0564 100.7 18.2564 98.2 18.2564Z" />
             <path d="M109.4 27.3564L105.8 18.4564H103.6L108.4 30.0564C108.1 30.9564 107.7 31.2564 106.7 31.2564H104.2V33.2564H106.7C108.5 33.2564 109.5 32.4564 110.2 30.6564L114.9 18.4564H112.8L109.4 27.3564Z"/>
             </svg>
-
         </a>
       </section>
-
     </footer>
 
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label class="date-label" for="search-date-in">Дата Заезда:</label>
+              <input class="search-form-field field" type="text" id="search-date-in" name="search-date-in" placeholder="Укажите дату" required>
+              <span class="input-comment input-invalid">Мы не можем отправить вас в прошлое.</span>
+            </p>
+
+            <p class="field-group">
+              <label class="date-label" for="search-date-out">Дата Выезда:</label>
+              <input class="search-form-field field" type="text" id="search-date-out" name="search-date-out" placeholder="Укажите дату" required>
+              <span class="input-comment">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+          <div class="form-counter-container">
+            <p class="search-form-user-options adult-options">
+              <label class="search-form-input ">Взрослые:</label>
+
+                <button class="button minus-button" type="button">
+                    <span class="visually-hidden">Уменьшить количество взрослых.</span>
+                    <svg class="button-image" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="currentColor"  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z"/></svg>
+                </button>
+                <input class="control-input" type="number" name="adultes" value="2" min="1" required>
+                <button class="button plus-button" type="button">
+                  <span class="visually-hidden">Увеличить количество взрослых.</span><svg class="button-image" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/></svg>
+                  </button>
+
+
+            </p>
+
+            <p class="search-form-user-options kids-options">
+              <label class="search-form-input ">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button"></button>
+                <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+                <button class="button minus-button" type="button">
+                  <span class="visually-hidden">Уменьшить количество детей.</span>
+                  <svg class="button-image" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z"/></svg>
+                </button>
+                <input class="control-input" type="number" name="kids" value="2" min="0" required>
+                <button class="button plus-button" type="button">
+                  <span class="visually-hidden">Увеличить количество детей.</span>
+                  <svg class="button-image" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/></svg>
+                </button>
+            </p>
+
+        </div>
+            <button class="button search-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </div>
-
   </body>
-
 </html>
