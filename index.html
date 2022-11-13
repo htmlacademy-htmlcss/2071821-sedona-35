@@ -71,7 +71,7 @@
           <li class="blue-item">
             <div class="blue-item-text">
               <h3 class="advantage-title">Настоящий городок</h3>
-              <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <p class="advantages-description advantages-blue-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <img class="advantages-image" src="images/advantages-photo-1.jpg" width="800" height="384" alt="Уютный вид Седоны.">
           </li>
@@ -90,8 +90,8 @@
           <li class="blue-item">
             <img class="advantages-image" src="images/advantages-photo-2.jpg" width="800" height="384" alt="Маршрут мост Дьявола.">
             <div class="blue-item-text">
-              <h3 class="advantage-title">Там есть мост дьявола</h3>
-              <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <h3 class="advantage-title">Там есть<br> мост дьявола</h3>
+              <p class="advantages-description advantages-blue-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
 
           </li>
@@ -99,15 +99,15 @@
         <ul  class="advantages-list">
           <li class="advantages-icon-item icon-item-house">
             <h3 class="advantage-title">Жилье</h3>
-            <p class="advantages-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <p class="advantages-description advantages-icon-description">Рекомендуем пожить<br> в настоящем мотеле, всё&nbsp;как&nbsp;в кино!</p>
           </li>
           <li class=" advantages-icon-item icon-item-food white-item">
             <h3 class="advantage-title ">Еда</h3>
-            <p class="advantages-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <p class="advantages-description advantages-icon-description">Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="advantages-icon-item icon-item-souvenirs">
             <h3 class="advantage-title">Сувениры</h3>
-            <p class="advantages-description">Не только китайского, но и настоящего местного производства!</p>
+            <p class="advantages-description advantages-icon-description">Не только китайского,<br> но и настоящего местного производства!</p>
           </li>
         </ul>
       </section>
@@ -122,6 +122,7 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="email">Поле ввода электронной почты.</label>
           <input class="input-email" type="email" name="email" placeholder="Ваш e-mail" required>
           <button class="button big-button" type="submit">Подписаться</button>
         </form>
@@ -154,10 +155,12 @@
       </section>
 
       <section class="footer-contacts">
+        <h2 class="visually-hidden">Контактный телефон.</h2>
         <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
 
       <section class="footer-logo">
+        <h2 class="visually-hidden">Логотип HTML Academy.</h2>
         <a class="logo-htmlacademy" href="https://htmlacademy.ru/">
           <svg class="footer-logo-image" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>
@@ -198,14 +201,14 @@
             </p>
           <div class="form-counter-container">
             <p class="search-form-user-options adult-options">
-              <label class="search-form-input ">Взрослые:</label>
+              <label for="adultes" class="search-form-input ">Взрослые:</label>
 
                 <button class="button minus-button" type="button">
                     <span class="visually-hidden">Уменьшить количество взрослых.</span>
                     <svg class="button-image" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="currentColor"  xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L0 2L14 2V0L0 0Z"/></svg>
                 </button>
-                <input class="control-input" type="number" name="adultes" value="2" min="1" required>
+                <input class="control-input" id="adultes" type="number" name="adultes" value="2" min="1" required>
                 <button class="button plus-button" type="button">
                   <span class="visually-hidden">Увеличить количество взрослых.</span><svg class="button-image" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/></svg>
@@ -215,17 +218,17 @@
             </p>
 
             <p class="search-form-user-options kids-options">
-              <label class="search-form-input ">Дети:</label>
+              <label for="kids" class="search-form-input">Дети:</label>
               <span class="tooltip">
-                <button class="tooltip-toggle" type="button"></button>
-                <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-kids"></button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-kids">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </span>
                 <button class="button minus-button" type="button">
                   <span class="visually-hidden">Уменьшить количество детей.</span>
                   <svg class="button-image" aria-hidden="true" focusable="false" width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0L0 2L14 2V0L0 0Z"/></svg>
                 </button>
-                <input class="control-input" type="number" name="kids" value="2" min="0" required>
+                <input class="control-input" id="kids" type="number" name="kids" value="2" min="0" required>
                 <button class="button plus-button" type="button">
                   <span class="visually-hidden">Увеличить количество детей.</span>
                   <svg class="button-image" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -240,6 +243,6 @@
       </div>
     </div>
 
-  </div>
+    </div>
   </body>
 </html>
