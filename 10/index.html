@@ -100,7 +100,7 @@
         <ul  class="advantages-list">
           <li class="advantages-icon-item icon-item-house">
             <h3 class="advantage-title">Жилье</h3>
-            <p class="advantages-description advantages-item-description">Рекомендуем пожить<br> в настоящем мотеле, всё как в кино!</p>
+            <p class="advantages-description advantages-item-description">Рекомендуем пожить<br> в настоящем мотеле, всё&nbsp;как&nbsp;в кино!</p>
           </li>
           <li class=" advantages-icon-item icon-item-food white-item">
             <h3 class="advantage-title ">Еда</h3>
@@ -123,6 +123,7 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="email">Поле ввода электронной почты.</label>
           <input class="input-email" type="email" name="email" placeholder="Ваш e-mail" required>
           <button class="button big-button" type="submit">Подписаться</button>
         </form>
@@ -220,8 +221,8 @@
             <p class="search-form-user-options kids-options">
               <label for="kids" class="search-form-input">Дети:</label>
               <span class="tooltip">
-                <button class="tooltip-toggle" type="button"></button>
-                <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-kids"></button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-kids">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </span>
                 <button class="button minus-button" type="button">
                   <span class="visually-hidden">Уменьшить количество детей.</span>
