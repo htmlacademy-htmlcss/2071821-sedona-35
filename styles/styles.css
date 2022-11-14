@@ -326,9 +326,15 @@ img {
   max-width: 175px;
 }
 
+.advantages-image-wrapper {
+  display: flex;
+}
+
 .advantages-image {
   display: block;
-  width: 800px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantages-item {
@@ -483,6 +489,7 @@ img {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+  color: #333333;
 }
 
 .email-form {
